@@ -1,0 +1,39 @@
+<div class="flex justify-between items-center p-4 md:p-8 bg-white">
+    <section class="flex justify-between items-center w-full">
+        <!-- Logo Section -->
+        <div class="flex items-center space-x-2">
+            <span class="text-black font-bold text-2xl">MANEESHWARAN</span>          
+        </div>
+
+        <!-- Navbar Section -->
+        <div class="flex items-center space-x-4">
+            <!-- Mobile Menu Toggle Button -->
+            <!-- <button class="lg:hidden" (click)="togglenav()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M3 9a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9Zm0 6.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                </svg>
+            </button> -->
+
+            <!-- Desktop Navbar Links -->
+            <ul class="hidden lg:flex space-x-5">
+                <li><a href="#"  routerLink="/main/about" class="px-3 py-2 font-semibold text-xl text-black hover:text-soft-seafoam-green cursor-pointer">About</a></li>
+                <li><a href="#" routerLink="/main/service" class="px-3 py-2 font-semibold text-xl text-black hover:text-soft-seafoam-green cursor-pointer">Service</a></li>
+                <li><a href="#" routerLink="/main/Works" class="px-3 py-2 font-semibold text-xl text-black hover:text-soft-seafoam-green cursor-pointer">Works</a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile Navbar Links (when menu is open) -->
+        <div>
+            <ul *ngIf="menuOpen" class="lg:hidden w-full mt-4">
+                <li class="mt-1"><a class="py-2 cursor-pointer font-semibold text-black hover:text-purple-500" routerLink="/main/about">About</a></li>
+                <li class="mt-1"><a class="py-2 cursor-pointer font-semibold text-black hover:text-purple-500" routerLink="/main/service">Service</a></li>
+                <li class="mt-1"><a class="py-2 cursor-pointer font-semibold text-black hover:text-purple-500" routerLink="/main/Works">Works</a></li>
+            </ul>
+        </div>
+
+        <!-- GET IN TOUCH Button -->
+        <button class="bg-soft-seafoam-green text-black text-xl font-semibold px-6 py-3 rounded-2xl hover:bg-light-mint-green ">
+            GET IN TOUCH
+        </button>
+    </section>
+</div>
