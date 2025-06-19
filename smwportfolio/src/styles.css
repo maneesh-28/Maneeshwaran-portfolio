@@ -1,15 +1,15 @@
+@import 'ngx-toastr/toastr'; 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import 'ngx-toastr/toastr.css';
-
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  :host {
+:host {
   display: block;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
   /* font-family: 'Cinzel', serif; */
 }
