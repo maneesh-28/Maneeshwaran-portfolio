@@ -7,13 +7,14 @@
 
   <div class="grid md:grid-cols-2 gap-10">
     <!-- contact form -->
-    <form class="bg-white shadow-md border border-emeraldGreen rounded-lg p-6 space-y-4">
+    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="bg-white shadow-md border border-emeraldGreen rounded-lg p-6 space-y-4 form-input">
       <div>
         <label class="block text-sm font-medium mb-1" for="name">Name</label>
         <input
           type="text"
           id="name"
-          class="w-full border border-wasabi rounded px-4 py-2 text-noirDeVigne focus:outline-none focus:ring-2 focus:ring-emeraldGreen"
+          formControlName="name"
+          class="w-full border border-wasabi rounded px-4 py-2 text-noirDeVigne focus:outline-none focus:ring-2 focus:ring-emeraldGreen form-input"
           placeholder="Your Name"
         />
       </div>
@@ -23,7 +24,8 @@
         <input
           type="email"
           id="email"
-          class="w-full border border-wasabi rounded px-4 py-2 text-noirDeVigne focus:outline-none focus:ring-2 focus:ring-emeraldGreen"
+          formControlName="email"
+          class="w-full border border-wasabi rounded px-4 py-2 text-noirDeVigne focus:outline-none focus:ring-2 focus:ring-emeraldGreen form-input"
           placeholder="you@example.com"
         />
       </div>
@@ -32,16 +34,20 @@
         <label class="block text-sm font-medium mb-1" for="message">Message</label>
         <textarea
           id="message"
+          formControlName="message"
           rows="5"
-          class="w-full border border-wasabi rounded px-4 py-2 text-noirDeVigne focus:outline-none focus:ring-2 focus:ring-emeraldGreen"
+          class="w-full border border-wasabi rounded px-4 py-2 text-noirDeVigne focus:outline-none focus:ring-2 focus:ring-emeraldGreen form-input"
           placeholder="Type your message..."
         ></textarea>
       </div>
 
       <button
         type="submit"
-        class="bg-emeraldGreen text-white px-6 py-2 rounded hover:bg-egyptianEarth transition">
-        Send Message
+        [disabled]="loading"
+        class="bg-emeraldGreen text-white px-6 py-2 rounded hover:bg-egyptianEarth transition btn-submit">
+        <!-- Send Message -->
+         <span *ngIf="loading" class="spinner"></span>
+    {{ loading ? 'Sending...' : 'Send Message' }}
       </button>
     </form>
 

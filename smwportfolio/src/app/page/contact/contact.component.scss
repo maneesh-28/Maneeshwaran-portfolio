@@ -1,0 +1,9 @@
+.form-input {
+  @apply w-full border border-wasabi rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emeraldGreen;
+}
+.btn-submit {
+  @apply bg-emeraldGreen text-white px-6 py-2 rounded hover:bg-egyptianEarth transition;
+}
+.spinner {
+  @apply animate-spin inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2;
+}
