@@ -8,7 +8,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 export const routes: Routes = [
-    {path:'home' , component: HomeComponent},
+    {path:'' , component: HomeComponent},
     {path:'about' , component: AboutComponent},
     {path:'service' , component: ServiceComponent},
     {path:'projects' , component: ProjectsComponent},
@@ -17,6 +17,5 @@ export const routes: Routes = [
     {path:'header' , component: HeaderComponent},
     {path:'footer' , component: FooterComponent},
 
-    { path: '**', redirectTo: 'home' }
-
+    { path: '**', redirectTo: '' },
 ];

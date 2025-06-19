@@ -7,7 +7,14 @@ const contactRoutes = require('./routes/contactRoutes');
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+// ✅ Enable CORS for your frontend domain
+app.use(cors({
+  origin: 'https://maneeshwaran.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Routes
