@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./src/**/*.{html,ts}", // Add all HTML and TypeScript files in the src folder
+    "./src/**/*.{html,ts}", 
   ],
   theme: {
     extend: {
@@ -14,6 +14,10 @@ module.exports = {
         creasedKhaki: '#F0D794',
         egyptianEarth: '#D68B52',
         noirDeVigne: '#111111',
+        emeraldGreen: '#21413F',     
+        wasabi: '#839878',      
+        creasedKhaki: '#F0D794',  
+
       }
     },
   },

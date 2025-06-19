@@ -1,1 +1,13 @@
-<p>service works!</p>
+<div id="service" class="bg-creasedKhaki text-noirDeVigne py-16 px-6 md:px-20 font-poppins">
+  <h2 class="text-3xl font-bold text-emeraldGreen mb-4">{{ title }}</h2>
+  <p class="text-lg text-noirDeVigne mb-10">{{ intro }}</p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <div
+      *ngFor="let tech of stacks"
+      class="bg-white shadow-md border border-emeraldGreen rounded-lg px-4 py-3 text-sm font-medium text-noirDeVigne text-center hover:bg-egyptianEarth hover:text-white transition duration-300"
+    >
+      {{ tech }}
+    </div>
+  </div>
+</div>

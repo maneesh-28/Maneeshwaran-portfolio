@@ -1,15 +1,20 @@
-<div id="home" class="flex flex-col items-center justify-center h-screen bg-emeraldGreen text-creasedKhaki px-4 text-center font-poppins">
-  <div class="mb-8">
-    <h1 class="text-5xl font-bold mb-2">Hi, I'm Maneeshwaran Saravanan</h1>
-    <p class="text-2xl text-wasabi">Full Stack Developer & Designer</p>
+<div id="home" class="flex flex-col items-center justify-center min-h-screen bg-emeraldGreen text-creasedKhaki px-4 text-center font-poppins">
+ 
+  <div class="mb-6 sm:mb-8">
+    <h1 class="text-3xl sm:text-5xl font-bold mb-2 leading-snug sm:leading-tight">
+      Hi, I'm Maneeshwaran Saravanan
+    </h1>
+    <p class="text-lg sm:text-2xl text-wasabi">Full Stack Developer & Designer</p>
   </div>
 
-  <div class="relative mb-8">
+
+  <div class="relative mb-6 sm:mb-8">
     <img src="/assets/img/smw.jpg" alt="Maneeshwaran"
-         class="rounded-full w-48 h-48 shadow-lg border-4 border-softSeafoamGreenpointer-events-none select-none" draggable="false" oncontextmenu="return false;"  />
+         class="rounded-full w-32 h-32 sm:w-48 sm:h-48 shadow-lg border-4 border-softSeafoamGreen pointer-events-none select-none"
+         draggable="false" oncontextmenu="return false;" />
     <div class="absolute bottom-0 right-0 bg-softSeafoamGreen rounded-full p-2 shadow-md">
       <svg xmlns="http://www.w3.org/2000/svg"
-           class="h-6 w-6 text-emeraldGreen"
+           class="h-4 w-4 sm:h-6 sm:w-6 text-emeraldGreen"
            fill="none" viewBox="0 0 24 24"
            stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -18,13 +23,12 @@
     </div>
   </div>
 
-  <!-- Buttons -->
-  <div class="flex gap-4 font-poppins">
-    <button class="px-6 py-2 bg-egyptianEarth text-noirDeVigne font-semibold rounded hover:bg-creasedKhaki transition">
+  <div class="flex flex-col sm:flex-row gap-4 font-poppins w-full sm:w-auto">
+    <button class="px-6 py-2 bg-egyptianEarth text-noirDeVigne font-semibold rounded hover:bg-creasedKhaki transition w-full sm:w-auto">
       Hire Me
     </button>
     <a href="/assets/resume.pdf" download
-       class="px-6 py-2 border border-creasedKhaki rounded hover:bg-creasedKhaki hover:text-noirDeVigne transition font-semibold">
+       class="px-6 py-2 border border-creasedKhaki rounded hover:bg-creasedKhaki hover:text-noirDeVigne transition font-semibold w-full sm:w-auto text-center">
       My Resume
     </a>
   </div>
