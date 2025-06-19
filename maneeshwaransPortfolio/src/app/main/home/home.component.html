@@ -1,14 +1,15 @@
-<div id="home" class="flex flex-col items-center justify-center h-screen bg-dark-olive-green">
-    <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-gray-800">Hi, I'm Maneeshwaran</h1>
-        <p class="text-lg text-gray-600">I'm a Full Stack Developer & Web Designer</p>
+<div id="home" class="flex flex-col items-center justify-center h-screen bg-dark-olive-green text-white px-4 text-center">
+  <div class="mb-8">
+    <h1 class="text-5xl font-bold mb-2">Hi, I'm {{ name }}</h1>
+    <p class="text-xl text-muted-sage-green">Full Stack Developer & Designer</p>
+  </div>
+
+  <div class="relative">
+    <img src="/assets/img/maneesh.jpg" alt="Maneeshwaran" class="rounded-full w-48 h-48 shadow-lg border-4 border-soft-seafoam-green" />
+    <div class="absolute bottom-0 right-0 bg-soft-seafoam-green rounded-full p-2 shadow-md">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-dark-olive-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
     </div>
-    <div class="relative">
-        <img src="/assets/img/maneesh.jpg" alt="Maneeshwaran" class="rounded-full w-48 h-48">
-        <div class="absolute bottom-0 right-0 bg-soft-seafoam-green rounded-full p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-        </div>
-    </div>
+  </div>
 </div>

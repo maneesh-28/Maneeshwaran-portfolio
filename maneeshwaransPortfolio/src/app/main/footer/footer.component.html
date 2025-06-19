@@ -1,0 +1,10 @@
+<footer class="bg-dark-olive-green text-white py-6">
+  <div class="container mx-auto text-center">
+    <p class="text-sm mb-4">© {{ currentYear }} Maneeshwaran. All rights reserved.</p>
+    <div class="flex justify-center gap-4">
+      <a *ngFor="let icon of socialLinks" [href]="icon.link" target="_blank">
+        <img [src]="icon.img" [alt]="icon.alt" class="w-6 h-6 hover:opacity-80" />
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  :host {
+  display: block;
+  font-family: 'Poppins', sans-serif; 
+  /* font-family: 'Cinzel', serif; */
+}

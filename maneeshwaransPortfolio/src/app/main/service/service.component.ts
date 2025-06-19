@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './service.component.css'
 })
 export class ServiceComponent {
+  skills = [
+  'Angular', 'Node.js', 'Express.js', 'PostgreSQL',
+  'PG Admin', 'Postman API', 'Render Hosting', 'Vercel Hosting',
+  'Figma (Basic)', 'DSA in JS', 'Python (Basic)'
+];
+
 
 }
