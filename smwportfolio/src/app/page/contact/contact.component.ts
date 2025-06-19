@@ -3,6 +3,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from '../../environments/environment.prod';
+// import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -31,7 +33,7 @@ export class ContactComponent {
     if (this.contactForm.invalid) return;
 
     this.loading = true;
-    this.http.post('http://localhost:5000/api/contact', this.contactForm.value).subscribe({
+    this.http.post(`${environment.apiUrl}/api/contact`, this.contactForm.value).subscribe({
       next: () => {
         this.toastr.success('Message sent successfully!');
         this.contactForm.reset();
