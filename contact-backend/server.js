@@ -10,7 +10,11 @@ const app = express();
 // app.use(cors());
 // ✅ Enable CORS for your frontend domain
 app.use(cors({
-  origin: 'https://maneeshwaran.vercel.app',
+  origin: [
+    'https://maneeshwaran.vercel.app',
+    'https://www.maneeshwaran.space',
+    'https://maneeshwaran.space'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
