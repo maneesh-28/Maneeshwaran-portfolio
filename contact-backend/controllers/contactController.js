@@ -32,7 +32,7 @@ exports.sendContactEmail = async (req, res) => {
     await transporter.sendMail(mailOptions);
     res.status(200).json({ success: true, message: 'Email sent successfully!' });
   } catch (error) {
-    // console.error('Email error:', error.message);
+    console.error('Email error:', error.message);
     res.status(500).json({ error: 'Email sending failed. Please try again later.' });
   }
 };
