@@ -13,7 +13,7 @@ export class ServiceComponent {
 
 stacks: string[] = [
   // Frontend
-  'HTML', 'CSS3', 'SCSS', 'Tailwind CSS', 'TypeScript', 'Angular',
+  'HTML', 'CSS3', 'SCSS', 'Tailwind CSS', 'TypeScript', 'Angular', 'Ionic',
 
   // Backend
   'Node.js', 'Express.js', 'PostgreSQL', 'PG Admin',
