@@ -9,15 +9,29 @@ const app = express();
 // Middleware
 // app.use(cors());
 // ✅ Enable CORS for your frontend domain
-app.use(cors({
+// app.use(cors({
+//   origin: [
+//     'https://maneeshwaran.vercel.app',
+//     'https://www.maneeshwaran.space',
+//     'https://maneeshwaran.space'
+//   ],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true
+// }));
+
+const corsOptions = {
   origin: [
     'https://maneeshwaran.vercel.app',
     'https://www.maneeshwaran.space',
     'https://maneeshwaran.space'
   ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
-}));
+};
+
+app.use(cors(corsOptions));
+
 
 app.use(express.json());
 
