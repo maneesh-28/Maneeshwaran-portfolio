@@ -1,0 +1,31 @@
+<div class="bg-white text-noirDeVigne py-16 font-poppins">
+  <div class="container mx-auto px-6 md:px-20">
+
+    <h2 class="text-3xl font-bold text-emeraldGreen mb-4">
+      {{ title }}
+    </h2>
+
+    <p class="text-lg mb-10 max-w-3xl">
+      {{ intro }}
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div
+        *ngFor="let post of posts"
+        class="bg-white shadow-md border border-emeraldGreen rounded-xl p-4 transition hover:shadow-lg hover:-translate-y-1 duration-300"
+      >
+        <iframe
+          [src]="getEmbedUrl(post.id)"
+          class="w-full rounded-lg"
+          height="500"
+          frameborder="0"
+          allowfullscreen
+          [title]="post.title"
+        ></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>

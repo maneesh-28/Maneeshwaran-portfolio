@@ -1,4 +1,4 @@
-<div id="projects" class="bg-creasedKhaki text-noirDeVigne py-16 px-6 md:px-20 font-poppins">
+<!-- <div id="projects" class="bg-creasedKhaki text-noirDeVigne py-16 px-6 md:px-20 font-poppins">
   <h2 class="text-3xl font-bold text-emeraldGreen mb-4">{{ title }}</h2>
   <p class="text-lg mb-10">{{ intro }}</p>
 
@@ -12,7 +12,7 @@
       <h3 class="text-lg font-semibold text-emeraldGreen mb-3">{{ project.name }}</h3>
 
       <div class="flex gap-4">
-        <!-- Visit Button -->
+
         <a [href]="project.liveUrl" target="_blank"
            class="flex items-center gap-1 bg-emeraldGreen text-white px-4 py-2 text-sm rounded hover:bg-egyptianEarth transition">
           Visit
@@ -22,12 +22,89 @@
           </svg>
         </a>
 
-        <!-- GitHub Button -->
+
         <a [href]="project.githubUrl" target="_blank"
            class="bg-noirDeVigne p-2 rounded hover:opacity-80 transition">
           <img src="/assets/logo/github.png" alt="GitHub" class="h-5 w-5" />
         </a>
       </div>
     </div>
+  </div>
+</div> -->
+
+
+
+
+<div id="projects" class="bg-creasedKhaki text-noirDeVigne py-16 font-poppins">
+  <div class="container mx-auto px-6 md:px-20">
+
+    <!-- Dynamic Title -->
+    <h2 class="text-3xl font-bold text-emeraldGreen mb-4">
+      {{ sectionTitle }}
+    </h2>
+
+    <p class="text-lg mb-8 max-w-3xl">
+      {{ intro }}
+    </p>
+
+    <!-- Tabs -->
+    <div class="flex gap-8 mb-10 border-b border-emeraldGreen">
+      <button
+        *ngFor="let tab of tabs"
+        (click)="setTab(tab.id)"
+        class="pb-3 font-medium transition"
+        [ngClass]="{
+          'text-emeraldGreen border-b-2 border-emeraldGreen': activeTab === tab.id,
+          'text-noirDeVigne opacity-60 hover:opacity-100': activeTab !== tab.id
+        }"
+      >
+        {{ tab.label }}
+      </button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <div
+        *ngFor="let project of currentData"
+        class="bg-white shadow-md border border-emeraldGreen rounded-xl p-6 flex flex-col items-center text-center transition hover:shadow-lg hover:-translate-y-1 duration-300"
+      >
+
+        <img
+          [src]="project.logo"
+          [alt]="project.name"
+          class="h-16 w-16 object-contain mb-4"
+        />
+
+        <h3 class="text-lg font-semibold text-emeraldGreen mb-4">
+          {{ project.name }}
+        </h3>
+
+        <div class="flex gap-4">
+
+          <!-- Live Button -->
+          <a
+            [href]="project.liveUrl"
+            target="_blank"
+            class="flex items-center gap-1 bg-emeraldGreen text-white px-4 py-2 text-sm rounded hover:bg-egyptianEarth transition"
+          >
+            Visit →
+          </a>
+
+          <!-- GitHub Button -->
+          <a
+            [href]="project.githubUrl"
+            target="_blank"
+            class="bg-noirDeVigne p-2 rounded hover:opacity-80 transition"
+          >
+            <img src="/assets/logo/github.png" alt="GitHub" class="h-5 w-5" />
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </div>

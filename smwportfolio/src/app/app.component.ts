@@ -8,6 +8,7 @@ import { ProjectsComponent } from './page/projects/projects.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { LinkedinPostComponent } from './page/linkedin-post/linkedin-post.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { Meta, Title } from '@angular/platform-browser';
     ServiceComponent,
     ProjectsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    LinkedinPostComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
